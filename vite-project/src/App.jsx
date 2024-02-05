@@ -5,9 +5,12 @@ function App() {
   return (
     <div className="HomePage">
 
+< NavBar />
+< Sidebar />
+< Footer />
       
     </div>
   )
 }
 
-export default App
+export default App;
