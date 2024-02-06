@@ -12,25 +12,25 @@ body {
   text-align: center;
 }
 
-.HomePage {
+.homepage {
   display: flex;
   background-color: #fbebdb;
   border: 2px solid black;
 }
 
-.NavBar {
+.navbar {
   display:flex;
   background-color: #fbebdb;
   border: 2px solid black; 
 }
 
-.Footer {
+.footer {
   display:flex;
   background-color: #fbebdb;
   border: 2px solid black; 
 }
 
-.SideBar {
+.sidebar {
   display:flex;
   background-color: #fbebdb;
   border: 2px solid black; 
