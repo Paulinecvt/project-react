@@ -1,12 +1,11 @@
-import React from "react";
-import { useState } from "react";
-import JSON from "../data/list.json";
+import React, { useState } from "react";
+import List from '../data/list.json'
 
-function ListDisplay({ list }) {
+function ListDisplay() {
 
-    const [listToDisplay, setListToDisplay] = useState(list);
-    const completedTask = (completed) => {
-        if (completed === true) {
+    const [listToDisplay, setListToDisplay] = useState([]);
+    const completedTask = (listDetails) => {
+        if (listDetails.completed === true) {
             return <p>✓</p>
         } else {
             return <p>𐄂</p>
@@ -19,19 +18,23 @@ function ListDisplay({ list }) {
         setListToDisplay(newList);
     }
 
-
-    {
-        listToDisplay.map((listDetails) => {
-            return (
+        return (
+            <div>
+        {listToDisplay.map((listDetails) => {
+            
                 <div className="listDisplayed">
                     <p>{listDetails.task}</p>
-                    < isCompleted completed={listDetails.completed} />
-                    <button onClick={() => removeList(list.listTask)}>Delete</button>
+                    {completedTask(listDetails)}
+                    <button onClick={() => removeList(listDetails.task)}>Delete</button>
                 </div>
-            )
-        })
-    }
-}
+
+        })};
+        </div>
+     )
+
+     } 
+
+
 
 export default ListDisplay;
 
