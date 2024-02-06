@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import List from '../data/list.json'
 
 function ListDisplay() {
 
     const [listToDisplay, setListToDisplay] = useState([]);
+    useEffect(() => {
+        setListToDisplay(List);
+      }, []);
+
     const completedTask = (listDetails) => {
         if (listDetails.completed === true) {
             return <p>✓</p>
@@ -20,9 +24,8 @@ function ListDisplay() {
 
         return (
             <div>
-        {listToDisplay.map((listDetails) => {
-            
-                <div className="listDisplayed">
+        {listToDisplay.map((listDetails, index) => {
+                <div className="listDisplayed" key={index}>
                     <p>{listDetails.task}</p>
                     {completedTask(listDetails)}
                     <button onClick={() => removeList(listDetails.task)}>Delete</button>
