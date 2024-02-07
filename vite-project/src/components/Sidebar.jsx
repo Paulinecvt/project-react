@@ -1,11 +1,11 @@
 import React from "react"
+import { Link } from "react-router-dom";
 
 function Sidebar() {
     return (
         <div className="Sidebar">
-            <a href="https://github.com/Paulinecvt/project-react">Home</a>
-            <p> </p>
-            <a href="https://github.com/Paulinecvt/project-react">About</a>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
         </div>
     )
 }
