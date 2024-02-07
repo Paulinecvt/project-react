@@ -12,26 +12,37 @@ body {
   text-align: center;
 }
 
+.ListDisplay {
+  background-color: aqua;
+  border: 2px solid black; 
+}
+
+
 .homepage {
   display: flex;
   background-color: #fbebdb;
   border: 2px solid black;
 }
 
-.navbar {
+.NavBar {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fbebdb;
+  border: 2px solid black; 
+  padding: 0 50px;
+}
+
+.Footer {
   display:flex;
   background-color: #fbebdb;
   border: 2px solid black; 
 }
 
-.footer {
+.Sidebar {
   display:flex;
-  background-color: #fbebdb;
-  border: 2px solid black; 
-}
-
-.sidebar {
-  display:flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #fbebdb;
   border: 2px solid black; 
 }
