@@ -12,9 +12,18 @@ body {
   text-align: center;
 }
 
-.ListDisplay {
-  background-color: aqua;
-  border: 2px solid black; 
+.listDisplayed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black; 
+  padding: 10px;
+}
+
+.listDisplayed button {
+  background-color: #fb6564;
+  color: white;
 }
 
 
@@ -28,22 +37,27 @@ body {
   display:flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fbebdb;
+  background-color: #cbe4ca;
   border: 2px solid black; 
   padding: 0 50px;
+  height: ;
+  width: auto;
 }
 
 .Footer {
   display:flex;
-  background-color: #fbebdb;
+  align-items: center;
+  background-color: #30c49d;
   border: 2px solid black; 
 }
 
 .Sidebar {
   display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: #fbebdb;
+
+  background-color: #f2d1ab;
   border: 2px solid black; 
 }
 
