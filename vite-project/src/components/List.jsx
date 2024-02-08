@@ -20,6 +20,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
           }
           return listDetails;
         });
+        console.log("changing status");
         setListToDisplay(updatedList);
       };
     
