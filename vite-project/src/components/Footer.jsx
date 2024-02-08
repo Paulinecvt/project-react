@@ -6,7 +6,7 @@ function Footer() {
         <div className="Footer">
             <p> </p>
             <img className="LogoFooter" src={logoFooter} alt="logo" />
-            <a href="https://github.com/Paulinecvt/project-react">Github Repo</a>
+            <Link to="https://github.com/Paulinecvt/project-react">Github Repo</Link>
         </div>
     );
 }

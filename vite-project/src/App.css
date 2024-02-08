@@ -33,7 +33,7 @@ body {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "sidebarContainer pages";
+  grid-template-areas: "sidebarContainer pagesContainer";
 }
 
 .sidebarContainer {
@@ -56,8 +56,8 @@ body {
   background-color: #88c98e;
 }
 
-.pages {
-  grid-area: pages;
+.pagesContainer {
+  grid-area: pagesContainer;
   text-align: center;
 }
 
