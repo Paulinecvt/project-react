@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import List from '../data/list.json'
 
-function Sidebar(props) {
+function Sidebar({ task, setTask, listToDisplay, setListToDisplay }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,7 +25,7 @@ function Sidebar(props) {
                     <input type="text"
                         name="task"
                         placeholder="Add a new task"
-                        value={props.task}
+                        value={task}
                         onChange={(e) => {setTask(e.target.value)}}
                     />
                     <button>Add task</button>

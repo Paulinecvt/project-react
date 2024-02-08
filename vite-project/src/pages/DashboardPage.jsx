@@ -1,15 +1,15 @@
+import React from 'react'
 import { useState } from "react";
 // import { Link } from 'react-router-dom';
-import ListDisplay from "../components/List";
-import ListData from "../data/list.json";
+import ListDisplay from '../components/List';
 
-function Dashboard () {
+function Dashboard ({listToDisplay, setListToDisplay}) {
 
 
     return (
         <div className="dashboard-div">
             <h1>Dashboard</h1>
-                    <ListDisplay />
+                    <ListDisplay listToDisplay={listToDisplay} setListToDisplay={setListToDisplay} />
         </div>
 
 

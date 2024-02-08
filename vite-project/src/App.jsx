@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { Routes, Route } from "react-router-dom"
 import './App.css'
+import ListData from './data/list'
 import NavBar from './components/NavBar'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
 import Dashboard from './pages/DashboardPage'
 import ItemDetails from './pages/ItemDetailsPage'
-import List from './components/List.jsx'
+import ListDisplay from './components/List.jsx'
 import About from './pages/AboutPage'
 import NotFound from './pages/NotFoundPage'
 
 function App() {
 
   const [listToDisplay, setListToDisplay] = useState([]);
-
   useEffect(() => {
-    setListToDisplay(List);
+    setListToDisplay(ListData);
   }, []);
 
 
@@ -46,3 +46,4 @@ function App() {
 }
 
 export default App;
+

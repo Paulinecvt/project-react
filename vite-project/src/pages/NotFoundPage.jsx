@@ -4,7 +4,7 @@ function NotFound (){
 
     return (
         <div>
-            <p>404 Not Found</p>
+            <h2>404 Not Found</h2>
         </div>
     );
 }
