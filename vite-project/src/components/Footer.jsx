@@ -1,5 +1,6 @@
 import React from "react"
 import logoFooter from '../img/logo-footer.png'
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
