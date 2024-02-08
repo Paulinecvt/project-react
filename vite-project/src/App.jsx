@@ -14,20 +14,22 @@ function App() {
     <div className="HomePage">
 
       <NavBar />
-      <Sidebar />
 
-      <div className="pages">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/item-details/:itemId" element={<ItemDetails />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-
+      <div className="container">
+        <div className="sidebarContainer">
+          <Sidebar />
+        </div>
+        <div className="pages">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/item-details/:itemId" element={<ItemDetails />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </div>
+      
       <Footer />
-
-
     </div>
   )
 }

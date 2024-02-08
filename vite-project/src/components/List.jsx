@@ -29,7 +29,8 @@ function ListDisplay() {
                 <div className="listDisplayed" key={index}>
                     <p>{listDetails.task}</p>
                     {completedTask(listDetails)}
-                    <button onClick={() => removeList(listDetails.task)}>Delete</button>
+                    <button className="editButton"onClick={() => editList(listDetails.task)}>Edit</button>
+                    <button className="deleteButton" onClick={() => removeList(listDetails.task)}>Delete</button>
                 </div>
 
             ))};

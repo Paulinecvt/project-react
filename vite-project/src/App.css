@@ -1,65 +1,108 @@
 body {
-  background-color: #fbebdb;
+  background-color: #FFFFFF;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 16px;
   color: black
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.NavBar {
+  position: fixed; /* Stick it to the top */
+  top: 0; /* Stick it to the top */
+  left: 0;
+  height: 50px;
+  width: 100%;
+  padding: 30px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LogoImg {
+  height: 60px;
+}
+
+.LogoImg:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.LogoImg.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "sidebarContainer pages";
+}
+
+.sidebarContainer {
+  grid-area: sidebarContainer;
+}
+
+.Sidebar {
+  width: 300px;
+  height: 300px;
+  margin-top: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 2opx;
+
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-evenly;
+
+  background-color: #88c98e;
+}
+
+.pages {
+  grid-area: pages;
   text-align: center;
 }
 
-.listDisplayed {
-  display: flex;
-  flex-direction: row;
+.Footer {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  bottom: 0; /* Stick it to the bottom */
+  left: 0;
+  display:flex;
   align-items: center;
-  justify-content: space-between;
-  border: 1px solid black; 
-  padding: 10px;
+  justify-content:space-between;
+  
+  background-color: #ffbd59;
 }
 
-.listDisplayed button {
+.LogoFooter {
+  height: 30px;
+  width: auto;
+}
+
+.listDisplayed {
+  margin: 10px;
+  padding: 10px;
+  border: 2.5px solid #8c52ff; 
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deleteButton {
+  background-color: #b9dae8;
+  color: white;
+}
+
+.deleteButton {
   background-color: #fb6564;
   color: white;
 }
 
 
-.homepage {
-  display: flex;
-  background-color: #fbebdb;
-  border: 2px solid black;
-}
 
-.NavBar {
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #cbe4ca;
-  border: 2px solid black; 
-  padding: 0 50px;
-  height: ;
-  width: auto;
-}
 
-.Footer {
-  display:flex;
-  align-items: center;
-  background-color: #30c49d;
-  border: 2px solid black; 
-}
 
-.Sidebar {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  background-color: #f2d1ab;
-  border: 2px solid black; 
-}
 
 /*
 .logo {
