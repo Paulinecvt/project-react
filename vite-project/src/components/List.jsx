@@ -50,6 +50,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
     });
     setListToDisplay(updatedList);
     setEditTask(null);
+    setEditedTask('');
 }
 
 
@@ -70,6 +71,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
                                 type="text"
                                 value={editedTask}
                                 onChange={(e) => setEditedTask(e.target.value)}
+                                placeholder={listDetails.task}
                                 />
                             ) : (
                                 <p>{listDetails.task}</p>
