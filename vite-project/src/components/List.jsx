@@ -36,15 +36,15 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
         setListToDisplay(newList);
     }
 
-    const setFormMode = (task) => {     // Two states of Edit: Editing and afterwards edited
+    const setFormMode = () => {     // Two states of Edit: Editing and afterwards edited
         setEditTask (task);
         setEditedTask (task);
     };
 
-    const handleEdit = () => {
-        const updatedList = listToDisplay.map((listDetails) => {
-            if (listDetails.task === editTask){
-                return { editedTask, task, ...listDetails }
+    const handleEdit = (index) => {
+        const updatedList = listToDisplay.map((listDetails, i) => {
+            if (i === index){
+                return { ...listDetails, task: editedTask }
             }
             return listDetails;
     });
@@ -65,7 +65,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
                             onChange={() => handleCheckboxChange(listDetails.completed)}
                             />
 
-                            {editTask === listDetails.task ? (
+                            {editTask === index ? (
                                 <input
                                 type="text"
                                 value={editedTask}
@@ -74,17 +74,14 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
                             ) : (
                                 <p>{listDetails.task}</p>
                             )};
-                        
                         {completedTask(listDetails)}
-
-                        {editTask === listDetails.task ? (
-                            <button className="editButton" onClick={handleEdit}>Save</button>
+                        {editTask === index ? (
+                            <button className="editButton" onClick={() => handleEdit(index)}>Save</button>
                         ) : (
-                            <button className="editButton" onClick={() => setFormMode(listDetails.task)}>Edit</button>
+                            <button className="editButton" onClick={() => setEditTask(index)}>Edit</button>
                         )}
-                        
-                        <button className="deleteButton" onClick={() => removeList(listDetails.task)}>Delete</button>
-                    </div>
+                        <button className="deleteButton" onClick={() => removeList(listDetails.task)}>Delete</button> 
+                       </div>
 
                 )
             })}
