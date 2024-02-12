@@ -63,7 +63,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
                         <input 
                             type= "checkbox"
                             checked= {listDetails.completed}
-                            onChange={() => handleCheckboxChange(listDetails.completed)}
+                            onChange={() => handleCheckboxChange(index)}
                             />
 
                             {editTask === index ? (
