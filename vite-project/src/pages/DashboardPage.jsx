@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
-// import { Link } from 'react-router-dom';
 import ListDisplay from '../components/List';
+
 
 function Dashboard ({listToDisplay, setListToDisplay}) {
 
@@ -10,6 +10,10 @@ function Dashboard ({listToDisplay, setListToDisplay}) {
         <div className="dashboard-div">
             <h1>Dashboard</h1>
                     <ListDisplay listToDisplay={listToDisplay} setListToDisplay={setListToDisplay} />
+                    <p>
+                    
+                    </p>
+
         </div>
 
 
