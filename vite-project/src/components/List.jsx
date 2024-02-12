@@ -96,7 +96,8 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
 
 
                         <div className="btns">
-                            <Link to="/item-details/:itemId">See more Details</Link>
+                            <Link to="/item-details/:itemId"><img src="./img/details-btn.png" /></Link>
+
                             {editTask !== index && (
                                 <button className="editButton" onClick={() => setFormMode(index)}>Edit</button>
                             )}

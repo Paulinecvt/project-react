@@ -89,13 +89,27 @@ body {
   justify-content: space-between;
 }
 
-.deleteButton {
+.editButton {
   background-color: #b9dae8;
   color: white;
 }
 
 .deleteButton {
   background-color: #fb6564;
+  color: white;
+}
+
+.about-page {
+  display: flex;
+  align-items: column;
+}
+
+.about-card {
+  margin: 10%;
+}
+
+.return-btn {
+  background-color: #b9dae8;
   color: white;
 }
 
