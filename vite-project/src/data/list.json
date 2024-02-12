@@ -1,9 +1,9 @@
 [
-    { "task": "Have an existential crisis", "completed": true},
-    { "task": "Cry a bit", "completed": false},
-    { "task": "Search for a good therapist", "completed": false},
-    { "task": "Keep smiling", "completed": true},
-    { "task": "Finish Day 1 Research Tasks", "completed": false},
-    { "task": "Finish Day 2 Development Tasks", "completed": true},
-    { "task": "Finish Day 2 Research Tasks", "completed": false}
+    { "task": "Looking for Bootcamp pictures", "completed": true},
+    { "task": "Have an existential crisis", "completed": false},
+    { "task": "Make jokes about feeling overwhelming being actually overwhelmed", "completed": false},
+    { "task": "Cry a bit", "completed": true},
+    { "task": "Don't throw the laptop out of the window", "completed": false},
+    { "task": "Break the code", "completed": true},
+    { "task": "Search for a good therapist", "completed": false}
   ]
