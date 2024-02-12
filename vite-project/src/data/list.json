@@ -1,9 +1,9 @@
 [
     { "task": "Looking for Bootcamp pictures", "completed": true},
     { "task": "Have an existential crisis", "completed": false},
-    { "task": "Make jokes about feeling overwhelming being actually overwhelmed", "completed": false},
+    { "task": "Make jokes about feeling overwhelmed being actually overwhelmed", "completed": false},
     { "task": "Cry a bit", "completed": true},
-    { "task": "Don't throw the laptop out of the window", "completed": false},
+    { "task": "Modify the data to avoid crying", "completed": false},
     { "task": "Break the code", "completed": true},
     { "task": "Search for a good therapist", "completed": false}
   ]

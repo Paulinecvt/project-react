@@ -22,6 +22,8 @@ function App() {
   const [task, setTask] = useState("");
 
 
+
+
   return (
     <div className="HomePage">
 
@@ -35,7 +37,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard listToDisplay={listToDisplay} setListToDisplay={setListToDisplay} />} />
             <Route path="/about" element={<About />} />
-            <Route path="/item-details/:taskId" element={<ItemDetails listToDisplay={listToDisplay}/>} />
+            <Route path="/item-details/:index" element={<ItemDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

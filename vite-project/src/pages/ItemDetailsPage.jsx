@@ -1,26 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import List from "../components/List";
 
+//UNSURE ABOUT THE CODE BC CANNOT DISPLAY IT YET
 
 function ItemDetails(props) {
 
    // USEFUL CONST
-   const {id} = useParams();
-   const taskId = props.listToDisplay.find((index) => {
-      return index === id;
-  });
+   const { index } = useParams();
+   const taskDetails = listToDisplay[index];
 
    return (
    <div className="listdetails-card">
        
        <div>
-         {props.task}
+         {taskDetails.task}
        </div>
 
       <input
             type="checkbox"
-            checked={props.completed}
+            checked={taskDetails.completed}
             onChange={() => handleCheckboxChange(index)}
       />
 
