@@ -41,10 +41,12 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
         setEditedTask (listToDisplay[index].task); // already edited
     };
 
-    const handleEdit = (index) => {
-
+    const handleEdit = (e, index) => {
+        e.preventDefault();
         //setEditedTask
         //setEditTask
+        console.log(index)
+        console.log(editedTask)
 
 
         const updatedList = listToDisplay.map((listDetails, i) => {
@@ -54,9 +56,11 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
             return listDetails;
     });
 
-    
-    setEditedTask(listToDisplay[index].task);
-    setEditTask(index); // needs the index
+    console.log(updatedList)
+    setEditTask(null)
+    //setEditedTask(listToDisplay[index].task);
+
+    //setEditTask(index); // needs the index
     setListToDisplay(updatedList);
     
     
@@ -70,27 +74,30 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
             {listToDisplay.map((listDetails, index) => {
                 return (
                     <div className="listDisplayed" key={index}>
+                        
                         <input 
                             type= "checkbox"
                             checked= {listDetails.completed}
                             onChange={() => handleCheckboxChange(index)}
                             />
+                        
 
+                        
                             {editTask === index ? (
-                                <input
+                                <form onSubmit={(e) => {handleEdit(e, index)}}><input
                                 type="text"
                                 value={editedTask}
                                 onChange={(e) => setEditedTask(e.target.value)}
                                 placeholder={listDetails.task}
                                 />
+                                <button type="submit" className="editButton">Save</button> </form>
                             ) : (
                                 <p>{listDetails.task}</p>
                             )}
                         
+
                         <div className="btns">
-                        {editTask === index ? (
-                            <button className="editButton" onClick={() => setEditedTask (listToDisplay[index].task)}>Save</button> 
-                        ) : (
+                        {editTask !== index &&  (
                             <button className="editButton" onClick={() => setFormMode(index)}>Edit</button> 
                         )}
                         <button className="deleteButton" onClick={() => removeList(listDetails.task)}>Delete</button> 
