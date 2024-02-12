@@ -35,7 +35,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard listToDisplay={listToDisplay} setListToDisplay={setListToDisplay} />} />
             <Route path="/about" element={<About />} />
-            <Route path="/item-details/:itemId" element={<ItemDetails />} />
+            <Route path="/item-details/:taskId" element={<ItemDetails listToDisplay={listToDisplay}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

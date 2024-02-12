@@ -1,22 +1,18 @@
+// IMPORTS
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import List from '../data/list.json'
 import ItemDetails from '../pages/ItemDetailsPage'
 import '../app.css'
 
+
 function ListDisplay({ listToDisplay, setListToDisplay }) {
+
+    // USEFUL CONST
     const [editTask, setEditTask] = useState(null);
     const [editedTask, setEditedTask] = useState(''); // ? clue
 
-
-    const completedTask = (listDetails) => {
-        if (listDetails.completed === true) {
-            return <p>✓</p>
-        } else {
-            return <p>𐄂</p>
-        }
-    };
-
+    // HANDLE THE CHECK OF THE CHECKBOX - MODIFY PARAMS
     const handleCheckboxChange = (index) => {
         const updatedList = listToDisplay.map((listDetails, i) => {
             if (i === index) {
@@ -30,7 +26,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
 
 
 
-
+    // REMOVE THE TASK - connected to Remove btn
     const removeList = (listTask) => {
         const newList = listToDisplay.filter((listDetails) => {
             return listDetails.task !== listTask;
@@ -38,31 +34,30 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
         setListToDisplay(newList);
     }
 
-    const setFormMode = (index) => {     // Two states of Edit: Editing and afterwards edited
+    // TASK EDITION
+    const setFormMode = (index) => {
         setEditTask(index); // editing
         setEditedTask(listToDisplay[index].task); // already edited
     };
 
+    // HANDLE THE EDITION OF THE TASK
     const handleEdit = (e, index) => {
         e.preventDefault();
-        //setEditedTask
-        //setEditTask
         console.log(index)
         console.log(editedTask)
 
-
-        const updatedList = listToDisplay.map((listDetails, i) => {
+        // LIST UPDATE
+    const updatedList = listToDisplay.map((listDetails, i) => {
             if (i === index) {
                 return { ...listDetails, task: editedTask }
             }
             return listDetails;
-        });
+    });
 
         console.log(updatedList)
-        setEditTask(null)
-        //setEditedTask(listToDisplay[index].task);
+        setEditTask(null);
 
-        //setEditTask(index); // needs the index
+        // FINAL LIST UPDATE
         setListToDisplay(updatedList);
     }
 
@@ -73,7 +68,6 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
             {listToDisplay.map((listDetails, index) => {
                 return (
                     <div className="listDisplayed" key={index}>
-
                         <input
                             type="checkbox"
                             checked={listDetails.completed}
@@ -96,7 +90,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
 
 
                         <div className="btns">
-                            <Link to="/item-details/:itemId"><img src="./img/details-btn.png" /></Link>
+                            <Link to={`/items-details/${listToDisplay.id}`}><img className="info-img" src="./img/details-btn.png" /></Link>
 
                             {editTask !== index && (
                                 <button className="editButton" onClick={() => setFormMode(index)}>Edit</button>
