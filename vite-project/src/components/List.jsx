@@ -4,7 +4,7 @@ import '../app.css'
 
 function ListDisplay({ listToDisplay, setListToDisplay }) {
     const [editTask, setEditTask] = useState(null);
-    const [editedTask, setEditedTask] = useState('');
+    const [editedTask, setEditedTask] = useState(''); // ? clue
   
 
     const completedTask = (listDetails) => {
@@ -36,21 +36,31 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
         setListToDisplay(newList);
     }
 
-    const setFormMode = () => {     // Two states of Edit: Editing and afterwards edited
-        setEditTask (task);
-        setEditedTask (task);
+    const setFormMode = (index) => {     // Two states of Edit: Editing and afterwards edited
+        setEditTask (index); // editing
+        setEditedTask (listToDisplay[index].task); // already edited
     };
 
     const handleEdit = (index) => {
+
+        //setEditedTask
+        //setEditTask
+
+
         const updatedList = listToDisplay.map((listDetails, i) => {
             if (i === index){
                 return { ...listDetails, task: editedTask }
             }
             return listDetails;
     });
+
+    
+    setEditedTask(listToDisplay[index].task);
+    setEditTask(index); // needs the index
     setListToDisplay(updatedList);
-    setEditTask(null);
-    setEditedTask('');
+    
+    
+    
 }
 
 
@@ -75,14 +85,17 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
                                 />
                             ) : (
                                 <p>{listDetails.task}</p>
-                            )};
-                        {completedTask(listDetails)}
+                            )}
+                        
+                        <div className="btns">
                         {editTask === index ? (
-                            <button className="editButton" onClick={() => handleEdit(index)}>Save</button>
+                            <button className="editButton" onClick={() => setEditedTask (listToDisplay[index].task)}>Save</button> 
                         ) : (
-                            <button className="editButton" onClick={() => setEditTask(index)}>Edit</button>
+                            <button className="editButton" onClick={() => setFormMode(index)}>Edit</button> 
                         )}
                         <button className="deleteButton" onClick={() => removeList(listDetails.task)}>Delete</button> 
+                        </div>
+
                        </div>
 
                 )
