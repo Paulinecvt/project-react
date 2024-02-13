@@ -20,9 +20,7 @@ function App() {
 
 
   const [task, setTask] = useState("");
-
   // <Route path="/item-details/:index" element={<ItemDetails />} />
-
 
 
   return (
@@ -38,8 +36,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard listToDisplay={listToDisplay} setListToDisplay={setListToDisplay} />} />
             <Route path="/about" element={<About />} />
-           <Route path="/items-details/:index" render={(props) => <ItemDetails taskDetails={listToDisplay[props.match.params.index]} />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/items-details/:index" render={(props) => <ItemDetails taskDetails={listToDisplay[props.match.params.index]} />} />
+            <Route path="*" element={<NotFound />}/>
           </Routes>
         </div>
       </div>

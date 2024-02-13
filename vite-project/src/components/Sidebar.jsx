@@ -21,7 +21,7 @@ function Sidebar({ task, setTask, listToDisplay, setListToDisplay }) {
     return (
         <div className="Sidebar">
             <div className="newTask">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="newTaskForm">
                     <input type="text"
                         name="task"
                         placeholder="Add a new task"
