@@ -7,7 +7,6 @@ import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
 import Dashboard from './pages/DashboardPage'
 import ItemDetails from './pages/ItemDetailsPage'
-import ListDisplay from './components/List.jsx'
 import About from './pages/AboutPage'
 import NotFound from './pages/NotFoundPage'
 
@@ -18,15 +17,17 @@ function App() {
     setListToDisplay(ListData);
   }, []);
 
-
   const [task, setTask] = useState("");
 
   return (
     <div className="HomePage">
 
-      <NavBar />
-
       <div className="container">
+
+      <div className="navbar">
+      <NavBar />
+      </div>
+
         <div className="sidebarContainer">
           <Sidebar task={task} setTask={setTask} listToDisplay={listToDisplay} setListToDisplay={setListToDisplay} />
         </div>

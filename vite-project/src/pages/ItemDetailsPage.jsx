@@ -4,19 +4,23 @@ import List from "../components/List";
 
 //UNSURE ABOUT THE CODE BC CANNOT DISPLAY IT YET
 
-function ItemDetails({listToDisplay, handleCheckboxChange}) {
+function ItemDetails() {
 
    // USEFUL CONST
    const { index } = useParams();
    const [task, setTask] = useState(null);
-   setTask(listToDisplay);
+   handleTaskDisplay();
 
    // set an id for each task and use it to display replacing the index ?
    // print the index in the array ?
-   const indexNumber = parseInt(index);
 
+   const handleTaskDisplay = task.map((listDetails, i) => {
+      if (index == i) {
+         setTask(task);
+      };
+   });
 
-   return (
+      return (
    <div className="listdetails-card">
        
        <div>
@@ -34,6 +38,9 @@ function ItemDetails({listToDisplay, handleCheckboxChange}) {
        </button>
     </div>
    );
+
+
 }
+
 
 export default ItemDetails;
