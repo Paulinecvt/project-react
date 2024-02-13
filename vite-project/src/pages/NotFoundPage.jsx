@@ -27,15 +27,17 @@ function NotFound() {
                 <div className="NotFoundConatiner">
                     <div className="Pauline404">
                         <img src={Player} alt="Pauline" onClick={handlePaulineClick} />
-                        <span>Pauline owes Simona {clickCountPauline} beers</span>
+                        <p>Pauline owes Simona {clickCountPauline} beers</p>
                     </div>
                     <div className="Simona404">
                         <img src={Player} alt="Simona" onClick={handleSimonaClick} />
-                        <span>Simona owes Pauline {clickCountSimona} beers</span>
+                        <p>Simona owes Pauline {clickCountSimona} beers</p>
                     </div>
                 </div>
-                <hr></hr>
+                <div>
                 <Link to="/">Back to Business aka. To-Do-List</Link>
+                </div>
+                
             </div>
         </div>
     );
