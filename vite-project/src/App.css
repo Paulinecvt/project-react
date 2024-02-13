@@ -114,8 +114,9 @@ body {
 }
 
 .info-img {
-  height : 1vh;
-  width: 1vw;
+  height: 7%;
+  width: 7%;
+  margin-bottom: 0;
 }
 
 

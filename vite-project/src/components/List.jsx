@@ -1,6 +1,7 @@
 // IMPORTS
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import infologo from "../img/details-btn.png";
 import List from '../data/list.json'
 import ItemDetails from '../pages/ItemDetailsPage'
 import '../app.css'
@@ -11,6 +12,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
     // USEFUL CONST
     const [editTask, setEditTask] = useState(null);
     const [editedTask, setEditedTask] = useState(''); // ? clue
+
 
     // HANDLE THE CHECK OF THE CHECKBOX - MODIFY PARAMS
     const handleCheckboxChange = (index) => {
@@ -90,9 +92,12 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
 
 
                         <div className="btns">
-                            <Link to={`/items-details/${listDetails.id}`}>
-                                <img src="./img/details-btn.png" />
+
+                            
+                            <Link to={`/items-details/${index}`}>
+                                <img className="info-img" src={infologo} />
                             </Link>
+                            
 
                             {editTask !== index && (
                                 <button className="editButton" onClick={() => setFormMode(index)}>Edit</button>

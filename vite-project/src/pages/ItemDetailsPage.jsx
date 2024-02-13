@@ -4,7 +4,7 @@ import List from "../components/List";
 
 //UNSURE ABOUT THE CODE BC CANNOT DISPLAY IT YET
 
-function ItemDetails() {
+function ItemDetails({listToDisplay, handleCheckboxChange}) {
 
    // USEFUL CONST
    const { index } = useParams();
