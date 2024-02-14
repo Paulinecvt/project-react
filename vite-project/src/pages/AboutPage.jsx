@@ -7,10 +7,12 @@ import simonaabout from '../img/simona-about.png';
 function About() {
     
     return (
-        <div className="about-page">
-    <div>
-       <h2>About the Listers</h2> 
-    </div>
+        <>
+        <div className="about-title">
+        <h2>About the Listers</h2> 
+     </div>
+    <div className="about-page">
+    
 
     <div className="about-card">
         <img src={paulineabout}/>
@@ -33,6 +35,7 @@ function About() {
     </div>
 
     </div>
+    </>
     );
 }
 

@@ -146,15 +146,39 @@ body {
   color: white;
 }
 
+.about-container {
+  margin-top: 110px;
+  height: 66vh;
+}
+
 .about-page {
+  padding: 10px;
+  padding-bottom: 100px;
   display: flex;
-  align-items: column;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 110px;
+  height: 60vh;
+}
+
+.about-title {
+  margin-top: 110px;
+  size: 40px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
 }
 
 .about-card {
   margin: 10%;
+  flex-direction: column;
+  display: flex;
+
 }
 
+.about-card img {
+  max-width: 20vw;
+}
 .return-btn {
   background-color: #b9dae8;
   color: white;
