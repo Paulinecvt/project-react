@@ -35,10 +35,10 @@ function Sidebar({ task, setTask, listToDisplay, setListToDisplay }) {
 
 
 
-            <div className='home-btn'>
+            <div className='sidebar-link'>
                 <Link to="/">Home</Link>
             </div>
-            <div className='about-btn'>
+            <div className='sidebar-link'>
                 <Link to="/about">About</Link>
             </div>
         </div>
