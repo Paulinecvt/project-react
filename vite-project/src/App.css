@@ -118,7 +118,8 @@ body {
 }
 
 .listdetails-card {
-  margin-top: 120px;
+  margin-top: 140px;
+  height: 64.5vh;
 }
 .dashboard-div {
   margin-top: 120px;
