@@ -148,7 +148,7 @@ body {
 
 .about-container {
   margin-top: 110px;
-  height: 66vh;
+  height: 68vh;
 }
 
 .about-page {
@@ -158,7 +158,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 110px;
-  height: 60vh;
+
 }
 
 .about-title {
@@ -169,8 +169,13 @@ body {
   justify-items: center;
 }
 
+.about-btn {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
 .about-card {
-  margin: 10%;
   flex-direction: column;
   display: flex;
 
@@ -179,6 +184,7 @@ body {
 .about-card img {
   max-width: 20vw;
 }
+
 .return-btn {
   background-color: #b9dae8;
   color: white;

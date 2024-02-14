@@ -7,10 +7,14 @@ import simonaabout from '../img/simona-about.png';
 function About() {
     
     return (
-        <>
+        <div className="about-container">
         <div className="about-title">
         <h2>About the Listers</h2> 
      </div>
+     <div className="about-btn">
+        <Link to="/">Dashboard</Link>
+     </div>
+
     <div className="about-page">
     
 
@@ -29,13 +33,14 @@ function About() {
         <button className="about-btn" href="https://github.com/sicawu">GitHub</button>
     </div>
 
-        <button className="return-btn">
-        <Link to="/">Dashboard</Link>
-        </button>
+<br/>
+    
+        
+
     </div>
 
     </div>
-    </>
+    </div>
     );
 }
 
