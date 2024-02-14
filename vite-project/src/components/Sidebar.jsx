@@ -6,17 +6,17 @@ function Sidebar({ task, setTask, listToDisplay, setListToDisplay }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+    
         const newTask = {
-            task: task
+          task: task
         };
-
+    
         const newList = [newTask, ...listToDisplay];
-
+    
         setListToDisplay(newList);
         setTask("");
-
-    };
+    
+      };
 
     return (
         <div className="Sidebar">
@@ -26,24 +26,19 @@ function Sidebar({ task, setTask, listToDisplay, setListToDisplay }) {
                         name="task"
                         placeholder="Add a new task"
                         value={task}
-                        onChange={(e) => { setTask(e.target.value) }}
+                        onChange={(e) => {setTask(e.target.value)}}
                     />
                     <button>Add task</button>
                 </form>
             </div>
 
-
-
-
-            <div className='sidebar-link'>
-                <Link to="/">Home</Link>
-            </div>
-            <div className='sidebar-link'>
-                <Link to="/about">About</Link>
-            </div>
         </div>
 
     )
 }
 
 export default Sidebar;
+
+
+
+

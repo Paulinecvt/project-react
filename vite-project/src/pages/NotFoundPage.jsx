@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import Player from '../img/player-new.png'
 import { Link } from 'react-router-dom';
+import Pauline from '../img/pauline-about.png';
+import Simona from '../img/simona-about.png';
 
 function NotFound() {
 
@@ -23,21 +25,19 @@ function NotFound() {
         <div className="NotFoundPage">
             <div>
                 <h1>We messed up, meow!</h1>
-                <h2>Blame who's in charge. The other one get's a free beer.</h2>
+                <p>Blame who's in charge. The other one gets a free beer.</p>
                 <div className="NotFoundConatiner">
                     <div className="Pauline404">
-                        <img src={Player} alt="Pauline" onClick={handlePaulineClick} />
-                        <p>Pauline owes Simona {clickCountPauline} beers</p>
+                        <img src={Pauline} alt="Pauline" onClick={handlePaulineClick} />
+                        <p>Pauline owes Simona {clickCountPauline} beer(s).</p>
+                        <Link to="/">Back to To-Do-List</Link>
                     </div>
                     <div className="Simona404">
-                        <img src={Player} alt="Simona" onClick={handleSimonaClick} />
-                        <p>Simona owes Pauline {clickCountSimona} beers</p>
+                        <img src={Simona} alt="Simona" onClick={handleSimonaClick} />
+                        <p>Simona owes Pauline {clickCountSimona} beer(s).</p>
+                        <Link to="/">Back to To-Do-List</Link>
                     </div>
-                </div>
-                <div>
-                <Link to="/">Back to Business aka. To-Do-List</Link>
-                </div>
-                
+                </div>                
             </div>
         </div>
     );

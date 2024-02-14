@@ -94,7 +94,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
                         <div className="btns">
 
                             
-                            <Link to={`/items-details/${index}`}>
+                            <Link to={`/details/${index}`}>
                                 <img className="info-img" src={infologo} />
                             </Link>
                             
