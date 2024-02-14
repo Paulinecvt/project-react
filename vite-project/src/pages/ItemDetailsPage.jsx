@@ -28,6 +28,7 @@ function ItemDetails() {
       <h1>Are you sure we should dive deeper in details with this one?</h1>
       <Link to="/">Please don't, go away!</Link>
 
+{/*}
        <div>
          {task.task}
        </div>
@@ -40,7 +41,8 @@ function ItemDetails() {
 
        <button className='return-btn'>
        <Link to="/">Dashboard</Link>
-       </button>
+   </button>   */}
+   
     </div>
    );
 

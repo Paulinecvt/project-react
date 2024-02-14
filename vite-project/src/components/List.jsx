@@ -69,6 +69,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
         <div>
             {listToDisplay.map((listDetails, index) => {
                 return (
+                    <div className="dashboard">
                     <div className="listDisplayed" key={index}>
                         <input
                             type="checkbox"
@@ -105,6 +106,7 @@ function ListDisplay({ listToDisplay, setListToDisplay }) {
                             <button className="deleteButton" onClick={() => removeList(listDetails.task)}>Delete</button>
                         </div>
 
+                    </div>
                     </div>
 
                 )

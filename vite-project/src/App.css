@@ -6,12 +6,14 @@ body {
 }
 
 .NavBar {
-  position: fixed; /* Stick it to the top */
+  position: fixed;  
+  background-color: white;
   top: 0; /* Stick it to the top */
   left: 0;
-  height: 50px;
-  width: 100%;
-  padding: 30px;
+  height: 65px;
+  width: 100vw;
+  padding-top: 15px;
+  margin-bottom: 30px;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +33,7 @@ body {
 .container {
   width: 100vw;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas: "sidebarContainer pagesContainer";
 }
@@ -41,9 +43,10 @@ body {
 }
 
 .Sidebar {
+  position: sticky 50%;
   width: 300px;
   height: 300px;
-  margin-top: 50%;
+  margin-top: 35%;
   margin-left: 10px;
   margin-right: 10px;
   padding: 20px;
@@ -56,8 +59,16 @@ body {
   background-color: #88c98e;
 }
 
-.dashboard-div {
-  margin-top: 100px;
+.LogoImg {
+  height: 60px;
+}
+
+.LogoImg:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.LogoImg.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 .newTaskForm {
@@ -67,7 +78,7 @@ body {
 }
 
 .newTaskForm input[type="text"] {
-  width: 90%;
+  width: 87%;
   padding: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -78,10 +89,6 @@ body {
   padding: 10px;
 }
 
-.sidebar-link {
-  color: black;
-  size: 18px;
-}
 
 .pagesContainer {
   grid-area: pagesContainer;
@@ -89,23 +96,32 @@ body {
 }
 
 .Footer {
-  position: fixed;
-  width: 100%;
-  height: 70px;
+
+  width: 100vw;
+  height: 80px;
   bottom: 0; /* Stick it to the bottom */
   left: 0;
+  padding: 7px;
+  margin-top: 50px;
   display:flex;
+  flex-direction: row;
   align-items: center;
   justify-content:space-between;
 
-  position: sticky;
   
   background-color: #ffbd59;
 }
 
 .LogoFooter {
   height: 30px;
-  width: auto;
+
+}
+
+.listdetails-card {
+  margin-top: 120px;
+}
+.dashboard-div {
+  margin-top: 120px;
 }
 
 .listDisplayed {
@@ -121,6 +137,7 @@ body {
 .editButton {
   background-color: #b9dae8;
   color: white;
+  margin: 0 10px;
 }
 
 .deleteButton {
@@ -143,23 +160,23 @@ body {
 }
 
 .info-img {
-  height: 7%;
-  width: 7%;
+  height: 5%;
+  width: 5%;
   margin-bottom: 0;
 }
 
 .NotFoundPage {
-  height: 100vh;
-  padding-top: 100px;
+  margin-top: 120px;
+  height: 66vh;
+  padding-top: 10px;
 }
 
 .NotFoundConatiner {
-  margin: 10px;
   padding: 10px;
   padding-bottom: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .NotFoundConatiner img {
